@@ -1,6 +1,6 @@
-module go_server
+module openlayer_test
 
-go 1.19
+go 1.18
 
 require (
 	github.com/alexander-melentyev/gin-nocache v1.0.2
