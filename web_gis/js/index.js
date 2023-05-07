@@ -9,7 +9,7 @@ import TileLayer from "./ol/layer/Tile.js";
 import VectorTileSource from "./ol/source/VectorTile.js"
 import VectorTileLayer from "./ol/layer/VectorTile.js";
 import MVT from "./ol/format/MVT.js";
-import {createBasicStyle} from "./ol/style/basic.js"
+import {createBasicStyle, createStyleInit} from "./ol/style/basic.js"
 
 const map = new Map({
     target: 'map',
@@ -56,6 +56,7 @@ function create_vectorlayer(url_str) {
 
 
 window.onload = function () {
-    EPSG4326_OLMapView(33.35,126.55,5);
-    create_vectorlayer('http://192.168.0.86:3650/api/tiles/maptiler-planet/{z}/{x}/{y}');
+    EPSG4326_OLMapView(33.35,126.55,10);
+    createStyleInit();
+    create_vectorlayer('http://127.0.0.1:3650/api/tiles/maptiler-planet/{z}/{x}/{y}');
 }
